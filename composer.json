@@ -1,0 +1,30 @@
+{
+    "name": "ang3/loggable-history-bundle",
+    "type": "symfony-bundle",
+    "description": "This bundles helps you to create events history from loggable entities.",
+    "keywords": ["history", "loggable", "event", "entity"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joanis ROUANET",
+            "email": "joanis.ang3@gmail.com",
+            "homepage": "http://www.lixye.fr"
+        }
+    ],
+    "require": {
+        "php": "~7.1",
+        "symfony/symfony": "^3.0",
+        "stof/doctrine-extensions-bundle": "^1.3",
+        "doctrine/orm": "^2.6",
+        "doctrine/doctrine-bundle": "^1.8"
+    },
+    "autoload": {
+        "psr-4": { "Ang3\\Bundle\\LoggableHistoryBundle\\": "" }
+    },
+    "require-dev": {
+        "phpro/grumphp": "^0.14.0",
+        "friendsofphp/php-cs-fixer": "^2.10",
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "phpunit/phpunit": "^7.0"
+    }
+}

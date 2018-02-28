@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  # AUTOWIRE
+  Ang3\Bundle\LoggableHistoryBundle\:
+    resource: '../../*'
+    exclude: '../../{DependencyInjection,Resources}'
+
+  # ALIASING
+  ang3_loggable_history.log_entry_manager:
+    class: Ang3\Bundle\LoggableHistoryBundle\Manager\LogEntryManager
+    public: true
