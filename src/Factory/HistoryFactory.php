@@ -55,7 +55,7 @@ class HistoryFactory
      * @param Collection|array $logs
      * @param int|null         $sort
      *
-     * @return LoggableHistory
+     * @return History
      */
     public function create($logs, $sort = SORT_ASC)
     {
@@ -125,6 +125,7 @@ class HistoryFactory
                         $validation = (bool) $this->expressionLanguage->evaluate($parameters['validation'], [
                             'stream' => (object) $log->getStreamData(),
                             'log' => (object) $log->getData(),
+                            'keys' => (object) array_keys($log->getData()),
                         ]);
                     } catch (Exception $e) {
                         throw new Exception(sprintf('Unable to validate expression of event code "%s" (%s)', $code, $e->getMessage()), 0, $e);
